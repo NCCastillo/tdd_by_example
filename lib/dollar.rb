@@ -1,18 +1,13 @@
 class Dollar
 
-  def initialize(amount)
+  attr_reader :amount
 
+  def initialize(amount)
+    @amount = amount
   end
 
   def times(multiplier)
-    amount = 5 * 2
+    @amount *= multiplier
   end
 
-  def amount
-    @amount = 5 * 2
-  end
-
-  def amount=(value)
-    @amount = value
-  end
 end
