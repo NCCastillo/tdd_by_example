@@ -10,4 +10,11 @@ describe Franc do
       expect(Franc.new(15)).to eq five.times(3)
     end
   end
+
+  context 'equality' do
+    it 'checks for equality' do
+      expect(Franc.new(5)).to eq Franc.new(5)
+      expect(Franc.new(5)).not_to eq Franc.new(6)
+    end
+  end
 end
