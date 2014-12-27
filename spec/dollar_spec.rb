@@ -7,6 +7,11 @@ describe Dollar do
       five.times(2)
 
       expect(five.amount).to eq 10
+      # weird side effect here.
+      # five is no longer 5, it is actually 10
+      # hence test fails!
+      five.times(3)
+      expect(five.amount).to eq 15
     end
   end
 end
