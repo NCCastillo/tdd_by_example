@@ -5,10 +5,14 @@ class Dollar
   end
 
   def times(multiplier)
-
+    amount = 5 * 2
   end
 
   def amount
-    10
+    @amount = 5 * 2
+  end
+
+  def amount=(value)
+    @amount = value
   end
 end
