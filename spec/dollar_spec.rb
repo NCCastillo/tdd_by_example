@@ -17,7 +17,7 @@ describe Dollar do
   context 'equality' do
     it 'checks for equality' do
       expect(Dollar.new(5)).to eq Dollar.new(5)
-      expect(Dollar.new(5)).not_to eq Dollar.new(5)
+      expect(Dollar.new(5)).not_to eq Dollar.new(6)
     end
   end
 end
