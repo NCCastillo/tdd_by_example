@@ -8,8 +8,4 @@ class Dollar < Money
     Dollar.new(amount * multiplier)
   end
 
-  def ==(other)
-    amount == other.amount
-  end
-
 end
