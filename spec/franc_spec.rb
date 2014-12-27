@@ -1,5 +1,6 @@
 require './lib/money'
 require './lib/franc'
+require './lib/dollar'
 
 describe Franc do
   context '#times' do
@@ -15,6 +16,7 @@ describe Franc do
     it 'checks for equality' do
       expect(Franc.new(5)).to eq Franc.new(5)
       expect(Franc.new(5)).not_to eq Franc.new(6)
+      expect(Franc.new(5)).not_to eq Dollar.new(5)
     end
   end
 end
