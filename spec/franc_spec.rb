@@ -1,3 +1,4 @@
+require './lib/money'
 require './lib/franc'
 
 describe Franc do
