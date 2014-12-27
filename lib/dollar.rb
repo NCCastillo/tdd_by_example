@@ -12,6 +12,4 @@ class Dollar < Money
     amount == other.amount
   end
 
-protected
-  attr_reader :amount
 end
