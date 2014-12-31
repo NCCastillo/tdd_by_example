@@ -16,7 +16,7 @@ describe Dollar do
     it 'checks for equality' do
       expect(Money.dollar(5)).to eq Money.dollar(5)
       expect(Money.dollar(5)).not_to eq Money.dollar(6)
-      expect(Money.dollar(5)).not_to eq Franc.new(5)
+      expect(Money.dollar(5)).not_to eq Money.franc(5)
     end
   end
 end
