@@ -9,6 +9,7 @@ class Money
   end
 
   def currency
+    @currency
   end
 
   def ==(other)
