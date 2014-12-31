@@ -28,4 +28,11 @@ describe Money do
       expect(Money.franc(5)).not_to eq Money.dollar(5)
     end
   end
+
+  context 'currency' do
+    it 'checks for currency' do
+      expect(Money.dollar(1).currency).to eq "USD"
+      expect(Money.franc(1).currency).to eq "CHF"
+    end
+  end
 end
