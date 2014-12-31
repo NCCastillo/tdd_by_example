@@ -1,12 +1,7 @@
 class Dollar < Money
 
   def initialize(amount, currency)
-    @amount = amount
-    @currency = currency
-  end
-
-  def currency
-    @currency
+    super
   end
 
   def times(multiplier)
