@@ -8,6 +8,9 @@ class Money
     Franc.new(amount)
   end
 
+  def currency
+  end
+
   def ==(other)
     amount == other.amount && self.class == other.class
   end
