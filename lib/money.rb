@@ -19,6 +19,10 @@ class Money
     amount == other.amount && currency == other.currency
   end
 
+  def times(multiplier)
+    Money.new(amount * multiplier, currency)
+  end
+
 protected
   attr_reader :amount
 end
