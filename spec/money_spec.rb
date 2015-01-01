@@ -30,7 +30,7 @@ describe Money do
 
   it 'returns a Sum when adding' do
     five = Money.dollar(5)
-    sum = five.plus(5)
+    sum = five.plus(five)
 
     expect(five).to eq sum.augend
     expect(five).to eq sum.addend
