@@ -20,8 +20,11 @@ describe Money do
   end
 
   it 'does simple addition' do
-    sum = Money.dollar(5).plus(Money.dollar(5))
+    five = Money.dollar(5)
+    sum = five.plus(five)
+    bank = Bank.new
+    reduced = bank.reduce(sum, "USD")
 
-    expect(Money.dollar(10)).to eq sum
+    expect(Money.dollar(10)).to eq reduced
   end
 end
