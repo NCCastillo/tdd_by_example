@@ -72,4 +72,15 @@ describe Money do
 
     expect(Money.dollar(10)).to eq result
   end
+
+  it 'does addition for Sum' do
+    five_bucks = Money.dollar(5)
+    ten_francs = Money.franc(10)
+    bank = Bank.new
+    bank.add_rate("CHF", "USD", 2)
+    sum = Sum.new(five_bucks, ten_francs).plus(five_bucks)
+    result = bank.reduce(sum, "USD")
+
+    expect(Money.dollar(15)).to eq result
+  end
 end
