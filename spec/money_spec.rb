@@ -27,4 +27,12 @@ describe Money do
 
     expect(Money.dollar(10)).to eq reduced
   end
+
+  it 'returns a Sum when adding' do
+    five = Money.dollar(5)
+    sum = five.plus(5)
+
+    expect(five).to eq sum.augend
+    expect(five).to eq sum.addend
+  end
 end
