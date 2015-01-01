@@ -58,4 +58,8 @@ describe Money do
 
     expect(Money.dollar(1)).to eq result
   end
+
+  it 'checks for an identity rate' do
+    expect(Bank.new.rate("USD", "USD")).to eq 1
+  end
 end
