@@ -4,8 +4,4 @@ class Dollar < Money
     super
   end
 
-  def times(multiplier)
-    Money.new(amount * multiplier, currency)
-  end
-
 end
