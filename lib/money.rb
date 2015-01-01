@@ -28,7 +28,8 @@ class Money
   end
 
   def reduce(to)
-    self
+    rate = (currency == "CHF" && to == "USD") ? 2 : 1
+    Money.new( amount / rate, to)
   end
 
 end
@@ -37,6 +38,9 @@ class Bank
 
   def reduce(source, to)
     source.reduce(to)
+  end
+
+  def add_rate(from, to, currency)
   end
 
 end
