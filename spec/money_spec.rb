@@ -35,4 +35,10 @@ describe Money do
       expect(Money.franc(1).currency).to eq "CHF"
     end
   end
+
+  context 'Class Equality' do
+    it 'checks different class equality' do
+      expect(Money.new(10, "CHF")).to eq Franc.new(10, "CHF")
+    end
+  end
 end
