@@ -1,6 +1,6 @@
 class Money
 
-  attr_reader :currency
+  attr_reader :amount, :currency
 
   def initialize(amount, currency)
     @amount = amount
@@ -27,14 +27,13 @@ class Money
     Sum.new(self, addend)
   end
 
-protected
-  attr_reader :amount
 end
 
 class Bank
 
   def reduce(source, to)
-    Money.dollar(10)
+    amount = source.augend.amount + source.addend.amount
+    Money.new(amount, to)
   end
 
 end

@@ -35,4 +35,12 @@ describe Money do
     expect(five).to eq sum.augend
     expect(five).to eq sum.addend
   end
+
+  it 'reduces sum' do
+    sum = Sum.new(Money.dollar(3), Money.dollar(4))
+    bank = Bank.new
+    result = bank.reduce(sum, "USD")
+
+    expect(Money.dollar(7)).to eq result
+  end
 end
