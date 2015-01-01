@@ -27,12 +27,15 @@ class Money
     Sum.new(self, addend)
   end
 
+  def reduce(to)
+    self
+  end
+
 end
 
 class Bank
 
   def reduce(source, to)
-    return source if source.instance_of? Money
     source.reduce(to)
   end
 
