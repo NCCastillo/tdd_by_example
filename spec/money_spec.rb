@@ -43,4 +43,11 @@ describe Money do
 
     expect(Money.dollar(7)).to eq result
   end
+
+  it 'reduces Money' do
+    bank = Bank.new
+    result = bank.reduce(Money.dollar(1), "USD")
+
+    expect(Money.dollar(1)).to eq result
+  end
 end
